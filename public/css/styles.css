@@ -38,7 +38,7 @@ header a {
 }
 
 .portrait {
-    width: 250px;
+    width: 300px;
 
 }
 
@@ -53,4 +53,10 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 32px;
+    font-family:Arial, Helvetica, sans-serif;
 }

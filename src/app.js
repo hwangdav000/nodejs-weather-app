@@ -62,20 +62,21 @@ app.get('/weather', (req, res)=> {
                 })
             } else {   
 
-                forecast(latitude, longitude, (error, {description, degrees, feel} = {}) => {
+                forecast(latitude, longitude, (error, {description, degrees, feel, humidity} = {}) => {
                     if (error) {
                         res.send({
                             error: "Error getting data"
                         })
                     } else {
                     
-                        let forecast = description + ". It is currently " + degrees + " degrees out.\nIt feels like " + feel + " degrees out."
+                        let forecast = description +". Humidity is " + humidity + ". It is currently " + degrees + " degrees out.\nIt feels like " + feel + " degrees out."
                         res.send({
                             location: location,
                             description: description,
                             degrees: degrees,
                             feel: feel,
                             forecast: forecast,
+                            humidity: humidity,
                         })
                     }
                 })
